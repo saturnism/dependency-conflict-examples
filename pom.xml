@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.example.deps</groupId>
+    <artifactId>deps-examples</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>example-1-conflict</module>
+        <module>example-2-manage</module>
+        <module>example-3a-manage-all</module>
+        <module>example-3b-exclusions</module>
+        <module>example-4-validation</module>
+        <module>example-5-flatten</module>
+        <module>example-multimodule-flatten</module>
+    </modules>
+    <packaging>pom</packaging>
+</project>
