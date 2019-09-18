@@ -4,32 +4,28 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.example.deps</groupId>
-    <artifactId>validation-project</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <parent>
+        <groupId>com.example.deps</groupId>
+        <artifactId>deps-examples</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <groupId>com.example.deps.example2</groupId>
+    <artifactId>example2-enforcer</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
     <dependencies>
         <dependency>
-          <groupId>com.google.cloud</groupId>
-          <artifactId>google-cloud-vision</artifactId>
+            <groupId>com.google.truth</groupId>
+            <artifactId>truth</artifactId>
+            <version>0.30</version>
         </dependency>
         <dependency>
-          <groupId>com.google.cloud</groupId>
-          <artifactId>google-cloud-pubsub</artifactId>
+            <groupId>com.google.cloud</groupId>
+            <artifactId>google-cloud-translate</artifactId>
+            <version>1.90.0</version>
         </dependency>
     </dependencies>
-
-    <dependencyManagement>
-      <dependencies>
-        <dependency>
-          <groupId>com.google.cloud</groupId>
-          <artifactId>google-cloud-bom</artifactId>
-          <version>0.84.1-alpha-SNAPSHOT</version>
-          <!-- version>0.84.0-alpha</version-->
-          <type>pom</type>
-          <scope>import</scope>
-        </dependency>
-      </dependencies>
-    </dependencyManagement>
 
     <build>
         <plugins>
@@ -37,6 +33,7 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-enforcer-plugin</artifactId>
                 <version>3.0.0-M2</version>
+
                 <executions>
                     <execution>
                         <id>enforce</id>
@@ -46,13 +43,13 @@
                         <configuration>
                             <rules>
                                 <dependencyConvergence/>
+                                <requireUpperBoundDeps/>
                             </rules>
                         </configuration>
                     </execution>
                 </executions>
+
             </plugin>
         </plugins>
     </build>
-
-
 </project>

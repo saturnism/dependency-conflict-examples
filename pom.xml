@@ -7,14 +7,15 @@
     <groupId>com.example.deps</groupId>
     <artifactId>deps-examples</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <properties>
+        <maven.compiler.target>11</maven.compiler.target>
+        <maven.compiler.source>11</maven.compiler.source>
+    </properties>
     <modules>
-        <module>example-1-conflict</module>
-        <module>example-2-manage</module>
-        <module>example-3a-manage-all</module>
-        <module>example-3b-exclusions</module>
-        <module>example-4-validation</module>
-        <module>example-5-flatten</module>
-        <module>example-multimodule-flatten</module>
+        <module>example-1-simple</module>
+        <module>example-2-enforcer</module>
+        <module>example-3a-exclusions</module>
+        <module>example-3b-depmgmt</module>
     </modules>
     <packaging>pom</packaging>
 </project>
