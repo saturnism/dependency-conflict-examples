@@ -14,8 +14,21 @@
     <modules>
         <module>example-1-simple</module>
         <module>example-2-enforcer</module>
+        <module>example-2a-upperbound</module>
         <module>example-3a-exclusions</module>
         <module>example-3b-depmgmt</module>
+        <module>example-3c-misalignment</module>
+        <module>example-3d-alignment</module>
+        <module>example-4-bom</module>
     </modules>
     <packaging>pom</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 </project>
