@@ -10,27 +10,17 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>com.example.deps.example4</groupId>
-    <artifactId>example4-morebom</artifactId>
+    <groupId>com.example.deps.example5</groupId>
+    <artifactId>example5-useflatten</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>
         <dependency>
-            <groupId>com.google.cloud</groupId>
-            <artifactId>google-cloud-pubsub</artifactId>
+            <groupId>com.example.deps.example5</groupId>
+            <artifactId>example5-depmgmt-flatten</artifactId>
+            <version>${project.version}</version>
         </dependency>
     </dependencies>
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>com.google.cloud</groupId>
-                <artifactId>google-cloud-bom</artifactId>
-                <version>0.109.0-alpha</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
 
     <build>
         <plugins>

@@ -19,7 +19,12 @@
         <module>example-3b-depmgmt</module>
         <module>example-3c-misalignment</module>
         <module>example-3d-alignment</module>
+        <module>example-3e-clash</module>
         <module>example-4a-bom</module>
+        <module>example-4b-morebom</module>
+        <module>example-5a-bomissues</module>
+        <module>example-5b-depmgmt-flatten</module>
+        <module>example-5c-useflatten</module>
     </modules>
     <packaging>pom</packaging>
 

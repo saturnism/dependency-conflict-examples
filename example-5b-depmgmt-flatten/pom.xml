@@ -10,8 +10,8 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>com.example.deps.example3</groupId>
-    <artifactId>example3-depmgmt</artifactId>
+    <groupId>com.example.deps.example5</groupId>
+    <artifactId>example5-depmgmt-flatten</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>
@@ -72,7 +72,32 @@
                         </configuration>
                     </execution>
                 </executions>
-
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>flatten-maven-plugin</artifactId>
+                <version>1.2.0-SNAPSHOT</version>
+                <executions>
+                    <!-- enable flattening -->
+                    <execution>
+                        <id>flatten</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>flatten</goal>
+                        </goals>
+                    </execution>
+                    <!-- ensure proper cleanup -->
+                    <execution>
+                        <id>flatten.clean</id>
+                        <phase>clean</phase>
+                        <goals>
+                            <goal>clean</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <flattenDependencyMode>all</flattenDependencyMode>
+                </configuration>
             </plugin>
         </plugins>
     </build>
